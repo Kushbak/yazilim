@@ -15,3 +15,11 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+.firebaserc
+.firebase
+/firebase-script
+/firebase.json
+/firestore.rules
+/buy-manas-database
+/public/firestore.rules
+/public/database.rules.json

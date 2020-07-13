@@ -26,9 +26,6 @@ export default class NavBottomTabIcon extends React.Component<Props, {}> {
     const { Settings } = screenProps;
 
     let badgeCount = 0;
-    // if (Settings) {
-    //   badgeCount = Settings['badge'+routeName]
-    // }
 
     return (
       <View style={{ width: 24, height: 25, margin: 2, paddingTop: 3 }}>

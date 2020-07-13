@@ -13,6 +13,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store';
 import * as RNLocalize from "react-native-localize";
 import { setupLocalization } from './helper';
+import {StatusBar} from "react-native";
+import {COLORS} from "./constants";
 
 interface State {
   Settings: any;
@@ -33,7 +35,7 @@ class App extends React.Component<{}, State> {
   componentDidMount() {
     // on device localization change
     RNLocalize.addEventListener("change", this.updateLocalization);
-    
+
     // on redux action
     this.storeUnsubscribe = store.subscribe(() => {
       const storeState = store.getState();
@@ -64,6 +66,7 @@ class App extends React.Component<{}, State> {
   render() {
     return (
       <Provider store = { store }>
+        <StatusBar backgroundColor={COLORS.b} />
         <PersistGate loading={null} persistor={persistor}>
           <Navigation screenProps={{
             Settings: store.getState().Settings,

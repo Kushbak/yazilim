@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+.appWrapper{
+    display: grid;
+    grid-template-areas: ' h '
+                         ' c '
+                         ' f ';
+    width: 1200px;
+    margin: 0 auto;
+    background: whitesmoke;
+} 
+
+.modalWrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+} 
+
+.FormsControls_formControl__1XUDo .react-tel-input .form-control{
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .01rem;
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+    padding-left: 6px;
+    margin-left: 32px;  
+    height: 35px;
+    width: 215px;
+    border-radius: 0; 
+    border: none;
+    border-bottom: 1px solid black;
+}
+ 
+.FormsControls_formControl__1XUDo .react-tel-input .flag-dropdown{
+    left: -5px;
+}
+.preloader{
+    text-align: center;
+    display: inline;
+}
+.preloader img{
+    width: 80%; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader{
+    width: 100%;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
 }

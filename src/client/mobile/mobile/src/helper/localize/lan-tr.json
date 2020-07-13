@@ -1,6 +1,12 @@
 
 {
   "app_name": "Manas Market",
-  "hello": "Selam, %{name}"
-  
+  "hello": "Selam, %{name}",
+  "title_home": "Anasayfa",
+  "title_favorite": "Favori",
+  "title_post": "Ekle",
+  "title_chat": "Sohbet",
+  "title_profile": "Profil",
+  "search": "Arama...",
+  "categories": "Kategoriler"
 }

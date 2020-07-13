@@ -4,14 +4,21 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import { createLogger } from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
 
 import Dummy from './reducers/dummyReducer';
 import Settings from './reducers/settingsReducer';
+import userReducer from "./reducers/userReducer";
+import categoryReducer from "./reducers/categoryReducer";
+import posterReducer from "./reducers/posterReducer";
 
 
 const rootReducer = combineReducers({
   Dummy,
   Settings,
+  userReducer,
+  categoryReducer,
+  posterReducer,
 
   lastAction: function lastAction(state = null, action) {
     return action;
@@ -39,11 +46,12 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // Redux: Store
 const store = createStore(
-  persistedReducer,
-  applyMiddleware(
-    createLogger(),
-  ),
+    persistedReducer,
+    applyMiddleware(
+        thunkMiddleware,
+    ),
 );
+
 // Middleware: Redux Persist Persister
 let persistor = persistStore(store);
 
@@ -53,5 +61,6 @@ export {
   persistor,
 };
 
+export type AppState = ReturnType<typeof rootReducer>;
 
 

@@ -1,5 +1,33 @@
 
 {
   "app_name": "Манас Маркет",
-  "hello": "Здравствуйте, %{name}"
+  "hello": "Здравствуйте, %{name}",
+  "title_home": "Главный",
+  "title_favorite": "Избранные",
+  "title_post": "Добавить",
+  "title_chat": "Чат",
+  "title_profile": "Профиль",
+  "search": "Поиск...",
+  "categories": "Категории",
+  "login_app": "Логин",
+  "enter": "Вход",
+  "title_personal_info": "Ваши данные",
+  "full_name": "Полное имя",
+  "reset_login": "Выход с аккаунта",
+  "name": "Полное имя",
+  "username":"Никнейм",
+  "email": "email",
+  "phone": "Телефон",
+  "faculcy": "Факультет",
+  "password": "Пароль",
+  "password_repeat": "Повторите пароль",
+  "terms_first": "Я ознакомлен(а) с ",
+  "terms_second_url": "условиями",
+  "terms_third": "пользовния",
+  "registration": "Регистрация",
+  "title": "Название",
+  "description": "Описание",
+  "cost": "Стоимость",
+  "publish": "Опубликовать"
+
 }
