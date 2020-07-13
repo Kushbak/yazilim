@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://buymanasapi.ru.xsph.ru/index.php/api/', 
+    baseURL: 'https://buymanasapi.ru.xsph.ru/index.php/api/', 
 })
 
 
