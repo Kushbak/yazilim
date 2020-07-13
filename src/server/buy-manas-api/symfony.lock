@@ -107,14 +107,74 @@
     "egulias/email-validator": {
         "version": "2.1.17"
     },
+    "fig/http-message-util": {
+        "version": "1.1.4"
+    },
     "fig/link-util": {
         "version": "1.1.0"
+    },
+    "firebase/php-jwt": {
+        "version": "v5.0.0"
+    },
+    "giggsey/libphonenumber-for-php": {
+        "version": "8.11.4"
+    },
+    "giggsey/locale": {
+        "version": "1.8"
+    },
+    "google/auth": {
+        "version": "v1.7.1"
+    },
+    "google/cloud-core": {
+        "version": "v1.35.0"
+    },
+    "google/cloud-storage": {
+        "version": "v1.18.0"
+    },
+    "google/crc32": {
+        "version": "v0.1.0"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.5.2"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "kreait/clock": {
+        "version": "1.0.1"
+    },
+    "kreait/firebase-bundle": {
+        "version": "1.9.0"
+    },
+    "kreait/firebase-php": {
+        "version": "4.39.2"
+    },
+    "kreait/firebase-tokens": {
+        "version": "1.10.0"
+    },
+    "kreait/gcp-metadata": {
+        "version": "1.0.1"
+    },
+    "ktamas77/firebase-php": {
+        "version": "2.2.2"
+    },
+    "lcobucci/jwt": {
+        "version": "3.3.1"
+    },
+    "league/flysystem": {
+        "version": "1.0.64"
+    },
     "monolog/monolog": {
         "version": "1.25.3"
+    },
+    "mtdowling/jmespath.php": {
+        "version": "2.5.0"
     },
     "nelmio/cors-bundle": {
         "version": "1.5",
@@ -155,11 +215,26 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/link": {
         "version": "1.0.0"
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "psr/simple-cache": {
+        "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "riverline/multipart-parser": {
+        "version": "2.0.8"
+    },
+    "rize/uri-template": {
+        "version": "0.3.2"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -172,6 +247,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "superbalist/flysystem-google-storage": {
+        "version": "7.2.2"
     },
     "symfony/asset": {
         "version": "v4.4.4"

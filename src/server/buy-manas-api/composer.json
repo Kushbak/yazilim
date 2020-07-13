@@ -7,6 +7,8 @@
         "ext-iconv": "*",
         "api-platform/api-pack": "^1.2",
         "doctrine/doctrine-migrations-bundle": "^2.1",
+        "kreait/firebase-bundle": "^1.9",
+        "ktamas77/firebase-php": "^2.2",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",

@@ -6,7 +6,7 @@ import {
 } from '../constants';
 
 const initialState = {
-  lan: 'en',
+  lan: 'ru',
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -14,7 +14,7 @@ const reducer = (state = initialState, action: any) => {
     case LANG_CHANGE:
     return {
       ...state,
-      lan: action.payload || 'en',
+      lan: action.payload || 'ru',
     };
     case BOTTOM_NAV_BADGE_CHANGE:
     return {

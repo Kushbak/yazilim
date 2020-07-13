@@ -3,7 +3,7 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { defaultOpts } from './common';
 import { trans } from '../helper';
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/Home/HomePage";
 
 
 export default createStackNavigator(

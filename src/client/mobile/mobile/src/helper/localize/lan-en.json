@@ -1,6 +1,12 @@
 
 {
-  "app_name": "Manas market",
-  "hello": "Hello, %{name}"
-  
+  "app_name": "Manas Market",
+  "hello": "Hello, %{name}",
+  "title_home": "Home",
+  "title_favorite": "Favorite",
+  "title_post": "Add",
+  "title_chat": "Chat",
+  "title_profile": "Profile",
+  "search": "Search...",
+  "categories": "Categories"
 }

@@ -1,8 +1,12 @@
 
 {
-  "app_name": "Mанас маркет",
-  "hello": "Саламатсызбы, %{name}"
-  
-
-  
+  "app_name": "Манас Маркет",
+  "hello": "Саламатсызбы, %{name}",
+  "title_home": "Башкы",
+  "title_favorite": "Тандалган",
+  "title_post": "Кошуу",
+  "title_chat": "Баарлашуу",
+  "title_profile": "Жеке",
+  "search": "Издөө...",
+  "categories": "Категориялар"
 }

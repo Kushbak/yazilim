@@ -16,6 +16,7 @@
     "@react-native-community/async-storage": "^1.7.1",
     "@react-native-community/masked-view": "^0.1.6",
     "@types/material-ui": "^0.21.7",
+    "axios": "^0.19.2",
     "core-js": "^3",
     "eslint-import-resolver-node": "^0.3.3",
     "i18n-js": "^3.5.1",
@@ -23,9 +24,14 @@
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-category": "^1.0.4",
     "react-native-device-info": "^5.4.1",
     "react-native-gesture-handler": "^1.5.3",
+    "react-native-image-picker": "^2.3.1",
     "react-native-localize": "^1.3.2",
+    "react-native-phone-input": "^0.2.4",
+    "react-native-picker": "^4.3.7",
+    "react-native-raw-bottom-sheet": "^2.1.0",
     "react-native-reanimated": "^1.6.0",
     "react-native-safe-area-context": "^0.6.2",
     "react-native-screens": "^2.0.0-alpha.32",
@@ -38,7 +44,8 @@
     "react-xml-parser": "^1.1.3",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
