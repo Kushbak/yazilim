@@ -16,14 +16,10 @@ const Main = (props) => {
             <Navbar />
             {searchedPost ?
                 <SearchedPostsContainer/>
-            :
-                (
-                    [
-                        <TopPostsContainer />,
-                        <LastPostsContainer />
-                    ]
-                )
-            }
+            :<>
+                <TopPostsContainer />
+                <LastPostsContainer />
+            </>}
             
         </div>
 

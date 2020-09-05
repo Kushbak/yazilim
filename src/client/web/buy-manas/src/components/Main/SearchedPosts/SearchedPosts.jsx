@@ -15,9 +15,7 @@ const SearchedPosts = (props) => {
     const LastPostsArray = [];
     props.searchedPost.sort((a, b) => {
         return new Date(b.publishedAt) - new Date(a.publishedAt);
-    }).map(p => {
-        LastPostsArray.push(p);
-    });
+    }).forEach(p => LastPostsArray.push(p));
 
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './TopPosts.module.css'
 import { useTranslation } from 'react-i18next';
 import "slick-carousel/slick/slick.css";
@@ -31,7 +31,7 @@ const TopPosts = (props) => {
     }
     takeNsort();
     
-    postsWithRating.sort((a, b) => b.ratings[0].rating - a.ratings[0].rating).map(p => {
+    postsWithRating.sort((a, b) => b.ratings[0].rating - a.ratings[0].rating).forEach(p => {
         if (topPostsArray.length <= 9)
             topPostsArray.push(p);
     }) 
@@ -45,7 +45,7 @@ const TopPosts = (props) => {
             <div className={styles.topPosts} >
                 <Slider className={styles.slidersStyle} {...settings} >
                     {
-                        topPostsArray.map(p => <NavLink to={`posts/${p.id}`}>
+                        topPostsArray.map(p => <NavLink to={`posts/${p.id}`} key={p.id}>
                             <div className={styles.topPostItem} key={p.id}>
                                 <div className={styles.imgBlock}>
                                     {p.images

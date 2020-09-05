@@ -24,7 +24,7 @@ const NewPost = (props) => {
     const changeFaculty = (item) => { 
         setState({
                 faculty: parseInt(item.target.value), 
-                department: state.departmentList.filter( i => i.faculty.id == parseInt(item.target.value) ),
+                department: state.departmentList.filter( i => i.faculty.id === parseInt(item.target.value) ),
                 departmentList: [...props.departments] 
             })
     }   

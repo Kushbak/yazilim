@@ -9,9 +9,7 @@ const FacultiesPosts = (props) => {
     const LastPostsArray = [];
     props.posts.sort((a, b) => {
             return new Date(b.publishedAt) - new Date(a.publishedAt);
-        }).map(p => {
-            LastPostsArray.push(p);
-        });
+        }).forEach(p => LastPostsArray.push(p));
     return (
         <div className={styles.facultyPostsWrapper}>
             <h3>{t('posts')}</h3>
@@ -19,7 +17,7 @@ const FacultiesPosts = (props) => {
             <div className={styles.facultyPosts} >
                 {
                     LastPostsArray.length
-                        ? LastPostsArray.map(p => <NavLink to={`/posts/${p.id}`}>
+                        ? LastPostsArray.map(p => <NavLink to={`/posts/${p.id}`} key={p.id}>
                             <div className={styles.facultyPostItem} key={p.id}>
                                 <div className={styles.imgBlock}>
                                     {p.images.length ?

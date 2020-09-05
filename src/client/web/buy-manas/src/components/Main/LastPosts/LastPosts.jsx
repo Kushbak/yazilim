@@ -13,9 +13,7 @@ const LastPosts = (props) => {
     const LastPostsArray = [];
     props.posts.sort((a, b) => {
         return new Date(b.publishedAt) - new Date(a.publishedAt);
-    }).map(p => {
-        LastPostsArray.push(p);
-    });
+    }).forEach(p => LastPostsArray.push(p));
 
     return (
         <div className={styles.LastPostsWrapper}>
@@ -23,7 +21,7 @@ const LastPosts = (props) => {
 
             <div className={styles.lastPosts} >
                     {LastPostsArray.map(p => (
-                        <NavLink to={`posts/${p.id}`}>
+                        <NavLink to={`posts/${p.id}`} key={p.id}>
                             <div className={styles.lastPostItem} key={p.id}>
                                 <div className={styles.imgBlock}>
                                     {p.images

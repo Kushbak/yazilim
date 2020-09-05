@@ -46,7 +46,7 @@ const PostsPage = (props) => {
             }
         }
         props.isAuth ? props.likeThePost(userReq, p.id, objR) : props.toggleModalWindowAuth()
-    }
+    } 
     return (
         <div className={styles.postWrapper}>
             <div className={styles.forFlexDisplay}>
@@ -54,7 +54,7 @@ const PostsPage = (props) => {
                     <h2>{p.title}</h2>
                     <div className={styles.postImg + ' ' + (p.images[0] !== undefined ? styles.noneBorder : '')}>
                         {p.images[0] !== undefined
-                            ? <img src={IMAGES_URL + p.images[0].url} alt="Post image" />
+                            ? <img src={IMAGES_URL + p.images[0].url} alt="Post" />
                             : <p>Нет фотографии</p>}
                     </div>
                     <div className={styles.miniDiv}>
@@ -63,7 +63,7 @@ const PostsPage = (props) => {
                             {props.ratings && <p>Рейтинг: {props.ratings.rating}</p>}
                             <p className={styles.cost}>Цена: {p.cost != null ? p.cost + ' сом' : t('contract')}</p>
                         </div>
-                        {p.author.id != props.userId &&
+                        {p.author.id !== props.userId &&
                             <div className={styles.like}>
                                 <input type="image" onClick={handleLike} width='50px'
                                     src={props.ratings && props.ratings.author.includes(`/index.php/api/users/${props.userId}`) 

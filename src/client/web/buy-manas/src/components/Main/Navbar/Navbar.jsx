@@ -27,9 +27,9 @@ const Navbar = (props) => {
                     type="search" 
                     placeholder={t('searchPlaceHolder')} 
                     value={searchText} 
-                    onChange={(event)=>setSearchText(event.target.value)} 
+                    onChange={e => setSearchText(e.target.value)} 
                 />
-                <button onClick={()=>onClickSearch(searchText)}>{t('searchButton')}</button>
+                <button onClick={ () => onClickSearch(searchText)}>{t('searchButton')}</button>
             </div>
             <CategoriesContainer />
         </div>

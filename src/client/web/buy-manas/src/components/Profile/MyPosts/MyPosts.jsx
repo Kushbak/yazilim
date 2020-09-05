@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MyPosts.module.css';
 import { IMAGES_URL } from '../../../constants';
 import { NavLink } from 'react-router-dom';
@@ -11,16 +11,14 @@ const MyPosts = (props) => {
 
     props.posts.sort((a, b) => {
         return new Date(b.publishedAt) - new Date(a.publishedAt);
-    }).map(p => {
-        LastPostsArray.push(p);
-    });
+    }).forEach(p => LastPostsArray.push(p));
     
     return (
         <div className={styles.myPostsWrapper}>
             <h3>{t('myPosts')}</h3>
             <div className={styles.myPosts}>
                 {LastPostsArray.length
-                    ? LastPostsArray.map(l => <NavLink to={`posts/${l.id}`}>
+                    ? LastPostsArray.map(l => <NavLink to={`posts/${l.id}`} key={l.id}>
                         <div className={styles.myPostItem} key={l.id}>
                             <div className={styles.imgBlock}>
                                 {l.images.length

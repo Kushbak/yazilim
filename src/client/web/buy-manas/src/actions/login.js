@@ -53,8 +53,8 @@ export const logWithCookie = (id) => (dispatch) => {
 export const login = (username, password) => (dispatch) => {
     dispatch(toggleIsFetching(true));
     authApi.checkUser(username)
-        .then(r => {
-            if (r.data.length && password == r.data[0].password) {
+        .then(r => { 
+            if (r.data.length && password === r.data[0].password) {
                 authApi.login(r.data[0].id)
                     .then(response => {
                         dispatch(setAuthUserData(response.data, true))

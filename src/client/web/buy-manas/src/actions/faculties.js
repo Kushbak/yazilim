@@ -41,8 +41,8 @@ export const setDepartments = () => (dispatch) => {
         });
 }
 
-export const getFacultiesPosts = (facultyId, page) => (dispatch) => {
-    if (facultyId == "0") {
+export const getFacultiesPosts = (facultyId, page) => (dispatch) => { 
+    if (facultyId === "0") {
         postersApi.getFacultiesNullPosts(page)
             .then(r => {
                 dispatch(getFacultiesPostsSuccess(r.data))

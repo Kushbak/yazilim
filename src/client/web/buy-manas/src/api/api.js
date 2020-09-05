@@ -1,11 +1,27 @@
 import * as axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://buymanasapi.ru.xsph.ru/index.php/api/', 
-})
+    baseURL: 'http://buymanasapi.ru.xsph.ru/index.php/api/', 
+}) 
 
-
-
+export const authApi = {
+    checkUser(username) {
+        return instance.get(`users`, { params: { 'username': username } })
+    },
+    login(userId) {
+        return instance.get(`users/${userId}`)
+    },
+    register(formData) {
+        return instance.post(`users`, {
+            "username": formData.username,
+            "password": formData.regPassword,
+            "name": formData.name,
+            "email": formData.email,
+            "phone": formData.number,
+            "faculty": formData.faculty ? `/api/faculties/${formData.faculty}` : null
+        })
+    }
+}
 
 export const usersApi = {
     getUser(userId) {
@@ -125,25 +141,4 @@ export const postersApi = {
     getFavoritePosts(userId, page = 1) {
         return instance.get(`ratings?author.id=${userId}&page=${page}`)
     }
-}
-
-
-
-export const authApi = {
-    checkUser(username) {
-        return instance.get(`users`, { params: { 'username': username } })
-    },
-    login(userId) {
-        return instance.get(`users/${userId}`)
-    },
-    register(formData) {
-        return instance.post(`users`, {
-            "username": formData.username,
-            "password": formData.regPassword,
-            "name": formData.name,
-            "email": formData.email,
-            "phone": formData.number,
-            "faculty": formData.faculty ? `/api/faculties/${formData.faculty}` : null
-        })
-    }
-}
+} 

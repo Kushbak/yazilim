@@ -26,4 +26,7 @@ const mapStateToProps = (state) => ({
     ratings: state.postsData.ratings[0]
 })
 
-export default compose( connect(mapStateToProps, { getOnePost, newComment, likeThePost, toggleModalWindowAuth, getRating }), withRouter)(PostsPageContainer)
+export default compose( 
+    connect(mapStateToProps, { getOnePost, newComment, likeThePost, toggleModalWindowAuth, getRating }), 
+    withRouter
+)(PostsPageContainer)
